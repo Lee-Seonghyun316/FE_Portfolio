@@ -4,6 +4,7 @@ import Title from './common/Title';
 import Mangnut from '../img/mangnut.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+import Wanted from '../img/Wanted-logo.jpeg';
 
 const Career = () => (
   <Wrap>
@@ -36,6 +37,27 @@ const Career = () => (
         </Stack>
       </Content>
     </ContentContainer>
+    <ContentContainer>
+      <Logo>
+        <LogoImg src={Wanted} alt="wanted" widthPercent={70} />
+      </Logo>
+      <Content>
+        <ContentText>프리온보딩 프론트엔드 코스</ContentText>
+        <Text>2022.02-04</Text>
+        <Text>다양한 기술 스택을 이용하여 9개의 프로젝트를 완성하였습니다. </Text>
+        <StackTitle>
+          <FontAwesomeIcon icon={faCode} /> 리뷰 등록 및 확인 모바일 반응형 웹페이지
+        </StackTitle>
+        <Stack>
+          <Item>기술스택 : react, redux-toolkit, RTK query, styled-component, react-router, props-types</Item>
+          <Item>
+            구현기능/역할 : 무한스크롤, 정렬, 이미지 최적화, 리뷰 목록 UI(그리드 리스트), 성능최적화, 댓글/대댓글 추가
+            수정 삭제, 좋아요/위시리스트, 링크 복사, 로컬 캐싱, controlledInput, Form, 반응형, 이미지 업로드/미리보기
+          </Item>
+          <Item>참여율 : 100%</Item>
+        </Stack>
+      </Content>
+    </ContentContainer>
   </Wrap>
 );
 
@@ -64,7 +86,7 @@ const Logo = styled.div`
   background-color: white;
 `;
 const LogoImg = styled.img`
-  max-width: 90%;
+  max-width: ${({ widthPercent }) => (widthPercent ? widthPercent : 90)}%;
 `;
 const Content = styled.div`
   border-left: 1px solid lightgray;
