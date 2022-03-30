@@ -13,7 +13,8 @@ const device = {
 const pixelToRem = (size) => `${size / 16}rem`;
 
 const fontSize = {
-  big: pixelToRem(35),
+  xLarge: pixelToRem(45),
+  large: pixelToRem(35),
   middle: pixelToRem(30),
   small: pixelToRem(25),
   xSmall: pixelToRem(20),

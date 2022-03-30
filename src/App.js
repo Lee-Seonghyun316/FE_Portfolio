@@ -2,13 +2,17 @@ import React from 'react';
 import GlobalStyle from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
-import Basic from './components/basic';
+import Head from './components/Head';
+import AboutMe from './components/AboutMe';
+import Skills from './components/Skills';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Basic />
+      <Head />
+      <AboutMe />
+      <Skills />
     </ThemeProvider>
   );
 }
