@@ -2,10 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faEnvelope, faPhone, faUserLarge } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
+import Title from './common/Title';
 
 const AboutMe = () => (
   <Wrap>
-    <Title>ABOUT ME</Title>
+    <Title text="ABOUT ME" />
     <Content>
       <TextItem>
         <FontAwesomeIcon icon={faUserLarge} />
@@ -43,13 +44,6 @@ export default AboutMe;
 
 const Wrap = styled.section`
   padding: 2rem 1rem;
-`;
-const Title = styled.h1`
-  padding: 2rem;
-  font-size: ${({ theme }) => theme.fontSize.large};
-  font-weight: 900;
-  text-align: center;
-  line-height: ${({ theme }) => theme.fontSize.xLarge};
 `;
 const Content = styled.ul`
   display: flex;

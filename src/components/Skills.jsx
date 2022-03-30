@@ -5,10 +5,11 @@ import Deployment from '../img/deployment.png';
 import VersionControl from '../img/version-control.png';
 import Communication from '../img/communication.png';
 import styled from 'styled-components';
+import Title from './common/Title';
 
 const Skills = () => (
   <Wrap>
-    <Title>SKILLS</Title>
+    <Title text="SKILLS" />
     <Content>
       <CardContainer>
         <CardItem>
@@ -43,13 +44,6 @@ export default Skills;
 const Wrap = styled.section`
   background-color: lightgray;
   padding: 2rem 1rem;
-`;
-const Title = styled.h1`
-  padding: 2rem;
-  font-size: ${({ theme }) => theme.fontSize.large};
-  font-weight: 900;
-  text-align: center;
-  line-height: ${({ theme }) => theme.fontSize.xLarge};
 `;
 const Content = styled.ul`
   display: flex;
