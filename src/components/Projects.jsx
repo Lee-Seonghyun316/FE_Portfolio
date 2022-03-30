@@ -16,18 +16,48 @@ import { Doughnut } from 'react-chartjs-2';
 import Title from './common/Title';
 import Left from '../img/angle-left-solid.svg';
 import Right from '../img/angle-right-solid.svg';
+import AutoComplete from '../img/component/autoComplete.png';
+import ClickToEdit from '../img/component/clickToAdit.png';
+import Modal from '../img/component/modal.png';
+import Tabs from '../img/component/tabs.png';
+import Tag from '../img/component/tag.png';
+import Toggle from '../img/component/toggle.png';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 SwiperCore.use([Navigation, Pagination]);
 
 const Projects = () => {
-  const data = {
+  const switiData = {
     labels: ['Me', 'TeamMembers'],
     datasets: [
       {
         label: '# of Votes',
         data: [322, 386],
+        backgroundColor: ['rgba(66, 66, 66, 0.4)', 'rgba(158, 158, 158, 0.2)'],
+        borderColor: ['rgba(66, 66, 66, 1)', 'rgba(158, 158, 158, 1)'],
+        borderWidth: 1,
+      },
+    ],
+  };
+  const componentData = {
+    labels: ['Me'],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [100],
+        backgroundColor: ['rgba(66, 66, 66, 0.4)'],
+        borderColor: ['rgba(66, 66, 66, 1)'],
+        borderWidth: 1,
+      },
+    ],
+  };
+  const keeperData = {
+    labels: ['Me', 'TeamMembers'],
+    datasets: [
+      {
+        label: '# of Votes',
+        data: [38, 2],
         backgroundColor: ['rgba(66, 66, 66, 0.4)', 'rgba(158, 158, 158, 0.2)'],
         borderColor: ['rgba(66, 66, 66, 1)', 'rgba(158, 158, 158, 1)'],
         borderWidth: 1,
@@ -115,7 +145,157 @@ const Projects = () => {
               </Item>
             </Stack>
             <Chart>
-              <Doughnut data={data} />
+              <Doughnut data={switiData} />
+            </Chart>
+          </Content>
+        </ContentContainer>
+      </Project>
+      <Project>
+        <ProjectTitle>프론트엔드 컴포넌트 6가지</ProjectTitle>
+        <Date>2022.02</Date>
+        <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
+          <SwiperSlide>
+            <Img src={Toggle} alt="toggle" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img src={Modal} alt="modal" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img src={Tabs} alt="tabs" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img src={Tag} alt="tag" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img src={AutoComplete} alt="autoComplete" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Img src={ClickToEdit} alt="clickToEdit" />
+          </SwiperSlide>
+        </Swiper>
+        <Description>
+          <StackTitle>
+            <FontAwesomeIcon icon={faClipboard} /> Description
+          </StackTitle>
+          <Strong>
+            React에서 프론트엔드에서 자주 사용하는 컴포넌트 6가지(Toggle, Modal, Tab, Tag, AutoComplete, ClickToEdit)를
+            구현하였습니다.
+          </Strong>
+        </Description>
+        <ContentContainer>
+          <Content>
+            <StackTitle>
+              <FontAwesomeIcon icon={faUserGroup} />
+              역할
+            </StackTitle>
+            <Stack>
+              <Item>토글 버튼: 가상요소 이용, checkbox custom</Item>
+              <Item>모달: 웹 접근성 고려</Item>
+              <Item>탭 구현</Item>
+              <Item>태그 구현: 성능최적화, Form event handing</Item>
+              <Item>자동 완성: 서은최적화, 불변성 유지</Item>
+              <Item>클릭 후 편집: controlled input</Item>
+            </Stack>
+            <StackTitle>
+              <FontAwesomeIcon icon={faWrench} /> 기술스택
+            </StackTitle>
+            <Stack>
+              <Item>JavaScript</Item>
+              <Item>React</Item>
+              <Item>styled-components</Item>
+              <Item>storybook</Item>
+              <Item>prop-types</Item>
+            </Stack>
+            <StackTitle>
+              <FontAwesomeIcon icon={faWrench} /> 참고링크
+            </StackTitle>
+            <Stack>
+              <Item>
+                <Link href="https://github.com/Lee-Seonghyun316/wanted_pre_onboarding">GitHub</Link>
+              </Item>
+            </Stack>
+          </Content>
+          <Content>
+            <StackTitle>
+              <FontAwesomeIcon icon={faTheaterMasks} />
+              참여율
+            </StackTitle>
+            <Stack>
+              <Item>
+                100%
+                <br />
+                (github commits 기준)
+              </Item>
+            </Stack>
+            <Chart>
+              <Doughnut data={componentData} />
+            </Chart>
+          </Content>
+        </ContentContainer>
+      </Project>
+      <Project>
+        <ProjectTitle>택배 운송장 정보 보호 웹</ProjectTitle>
+        <Date>2021.12</Date>
+        <Description>
+          <StackTitle>
+            <FontAwesomeIcon icon={faClipboard} /> Description
+          </StackTitle>
+          <Strong>
+            개인정보 보호를 위해 운송장 정보를 암호화한 후 QR 로 제공하는 앱. 택배 기사인 경우 QR 인식을 통해 정보 확인
+            가능.
+          </Strong>
+          <br />
+          2021 겨울 Energize Dongguk 융합 페어 Farm 경진대회 - 최우수상(동국대학교 융합교육원, 대학혁신지원사업단)
+        </Description>
+        <ContentContainer>
+          <Content>
+            <StackTitle>
+              <FontAwesomeIcon icon={faUserGroup} />
+              역할
+            </StackTitle>
+            <Stack>
+              <Item>프론트엔드 기술환경 구성 및 기본 기능 구현</Item>
+              <Item>google, github 로그인/로그아웃</Item>
+              <Item>firebase DB 연결, 저장, 데이터 조회</Item>
+              <Item>QR 코드 생성, 스캔</Item>
+              <Item>crypto-js를 이용한 client 정보 암호화</Item>
+              <Item>기획/플로우차트 작성</Item>
+            </Stack>
+            <StackTitle>
+              <FontAwesomeIcon icon={faWrench} /> 기술스택
+            </StackTitle>
+            <Stack>
+              <Item>JavaScript</Item>
+              <Item>React</Item>
+              <Item>PostCSS</Item>
+              <Item>React-router</Item>
+              <Item>firebase Authentication, realtime DB</Item>
+              <Item>Crypto-js</Item>
+              <Item>AWS Lambda</Item>
+            </Stack>
+            <StackTitle>
+              <FontAwesomeIcon icon={faWrench} /> 참고링크
+            </StackTitle>
+            <Stack>
+              <Item>
+                <Link href="https://github.com/Lee-Seonghyun316/wanted_pre_onboarding">GitHub</Link>
+              </Item>
+            </Stack>
+          </Content>
+          <Content>
+            <StackTitle>
+              <FontAwesomeIcon icon={faTheaterMasks} />
+              참여율
+            </StackTitle>
+            <Stack>
+              <Item>
+                {Math.round((38 / (38 + 2)) * 10000) / 100}%
+                <br />
+                (github commits 기준)
+              </Item>
+            </Stack>
+            <Chart>
+              <Doughnut data={keeperData} />
             </Chart>
           </Content>
         </ContentContainer>
@@ -132,6 +312,12 @@ const Wrap = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 0;
+  }
   .swiper-button-next {
     background: url(${Right}) no-repeat center;
   }
@@ -157,6 +343,7 @@ const Date = styled.p`
 const Project = styled.div`
   max-width: 50rem;
   padding: 2rem;
+  border-bottom: 1px solid grey;
 `;
 const Img = styled.img`
   padding: 0 5%;
