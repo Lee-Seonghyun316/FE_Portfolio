@@ -70,20 +70,22 @@ const Projects = () => {
       <Project>
         <ProjectTitle>SWITI 앱</ProjectTitle>
         <Date>2021.03-2021.12</Date>
-        <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
-          <SwiperSlide>
-            <Img src={Switi1} alt="switi1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={Switi2} alt="switi2" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={Switi3} alt="switi3" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={Switi4} alt="switi4" />
-          </SwiperSlide>
-        </Swiper>
+        <SwiperContainer>
+          <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
+            <SwiperSlide>
+              <Img src={Switi1} alt="switi1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={Switi2} alt="switi2" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={Switi3} alt="switi3" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={Switi4} alt="switi4" />
+            </SwiperSlide>
+          </Swiper>
+        </SwiperContainer>
         <Description>
           <StackTitle>
             <FontAwesomeIcon icon={faClipboard} /> Description
@@ -340,8 +342,12 @@ const Date = styled.p`
   color: grey;
   font-weight: 600;
 `;
+const SwiperContainer = styled.div`
+  max-width: 100%;
+`;
 const Project = styled.div`
   max-width: 50rem;
+  width: 90%;
   padding: 2rem;
   border-bottom: 1px solid grey;
 `;

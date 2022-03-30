@@ -67,6 +67,7 @@ const Wrap = styled.section`
 `;
 const ContentContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   max-width: 50rem;
   margin: auto;
   padding: 2rem;
@@ -91,6 +92,7 @@ const LogoImg = styled.img`
 const Content = styled.div`
   border-left: 1px solid lightgray;
   padding-left: 2rem;
+  width: 32rem;
 `;
 const ContentText = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.small};
