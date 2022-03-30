@@ -48,13 +48,24 @@ const Career = () => (
         <StackTitle>
           <FontAwesomeIcon icon={faCode} /> 리뷰 등록 및 확인 모바일 반응형 웹페이지
         </StackTitle>
+        <Text>기술스택</Text>
         <Stack>
-          <Item>기술스택 : react, redux-toolkit, RTK query, styled-component, react-router, props-types</Item>
-          <Item>
-            구현기능/역할 : 무한스크롤, 정렬, 이미지 최적화, 리뷰 목록 UI(그리드 리스트), 성능최적화, 댓글/대댓글 추가
-            수정 삭제, 좋아요/위시리스트, 링크 복사, 로컬 캐싱, controlledInput, Form, 반응형, 이미지 업로드/미리보기
-          </Item>
+          <Item>react, react-router</Item>
+          <Item>redux-toolkit, RTK query</Item>
+          <Item>props-types</Item>
+          <Item>react-router</Item>
+          <Item>무한스크롤: Intersection Observer</Item>
+          <Item>정렬, 리뷰 목록 UI(그리드 리스트), 댓글/대댓글 추가 수정 삭제, 좋아요/위시리스트, 링크 복사</Item>
+          <Item>이미지 최적화, 성능최적화, 로컬 캐싱</Item>
+          <Item>controlledInput, Form</Item>
+          <Item>이미지 업로드/미리보기</Item>
+        </Stack>
+        <Text> 구현기능/역할</Text>
+        <Stack>
           <Item>참여율 : 100%</Item>
+          <Item>
+            <Link href="https://github.com/Lee-Seonghyun316/wanted-codestates-project-9">Github</Link>
+          </Item>
         </Stack>
       </Content>
     </ContentContainer>
@@ -100,7 +111,9 @@ const ContentText = styled.h1`
   padding: 1rem 0;
 `;
 const Text = styled.p`
-  margin-bottom: 2rem;
+  font-size: ${({ theme }) => theme.fontSize.xxSmall};
+  font-weight: 500;
+  margin-bottom: 1rem;
 `;
 const StackTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xSmall};
@@ -116,3 +129,7 @@ const Stack = styled.ul`
   margin-bottom: 2rem;
 `;
 const Item = styled.li``;
+const Link = styled.a`
+  color: grey;
+  font-weight: 600;
+`;
