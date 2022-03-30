@@ -6,6 +6,7 @@ import Head from './components/Head';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Career from './components/Career';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Head />
       <AboutMe />
       <Skills />
+      <Career />
       <Projects />
     </ThemeProvider>
   );
