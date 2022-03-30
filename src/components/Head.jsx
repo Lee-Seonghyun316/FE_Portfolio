@@ -34,6 +34,7 @@ const Introduction = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3rem;
   background-image: url(${MainImg});
   background-size: cover;
   height: 20rem;

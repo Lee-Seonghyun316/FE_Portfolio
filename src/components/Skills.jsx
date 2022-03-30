@@ -56,7 +56,9 @@ const Content = styled.ul`
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem;
-  gap: 2rem;
+  gap: 3rem;
+  max-width: 50rem;
+  margin: auto;
 `;
 const CardContainer = styled.div`
   display: flex;

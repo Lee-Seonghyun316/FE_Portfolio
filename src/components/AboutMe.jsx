@@ -57,11 +57,14 @@ const Content = styled.ul`
   flex-wrap: wrap;
   padding: 2rem;
   gap: 2rem;
+  max-width: 40rem;
+  margin: auto;
 `;
 const TextItem = styled.li`
   display: flex;
   text-align: left;
-  width: 40%;
+  width: 15rem;
+  padding: 0 0 2rem 2rem;
 `;
 const TextTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.xSmall};
