@@ -50,7 +50,7 @@ const Career = () => (
       <Content>
         <ContentText>프리온보딩 프론트엔드 코스</ContentText>
         <Text>2022.02-04</Text>
-        <Text>다양한 기술 스택을 이용하여 9개의 프로젝트를 완성하였습니다. </Text>
+        <Text>다양한 기술 스택을 이용하여 8개의 프로젝트를 완성하였습니다. </Text>
         <SwiperContainer>
           <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
             <SwiperSlide>
@@ -249,7 +249,7 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-02">
+                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-11">
                       Github(public)
                     </Link>
                   </Item>
