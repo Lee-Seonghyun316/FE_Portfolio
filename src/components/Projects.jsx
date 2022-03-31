@@ -155,26 +155,28 @@ const Projects = () => {
       <Project>
         <ProjectTitle>프론트엔드 컴포넌트 6가지</ProjectTitle>
         <Date>2022.02</Date>
-        <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
-          <SwiperSlide>
-            <Img src={Toggle} alt="toggle" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={Modal} alt="modal" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={Tabs} alt="tabs" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={Tag} alt="tag" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={AutoComplete} alt="autoComplete" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Img src={ClickToEdit} alt="clickToEdit" />
-          </SwiperSlide>
-        </Swiper>
+        <SwiperContainer>
+          <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
+            <SwiperSlide>
+              <Img src={Toggle} alt="toggle" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={Modal} alt="modal" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={Tabs} alt="tabs" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={Tag} alt="tag" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={AutoComplete} alt="autoComplete" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Img src={ClickToEdit} alt="clickToEdit" />
+            </SwiperSlide>
+          </Swiper>
+        </SwiperContainer>
         <Description>
           <StackTitle>
             <FontAwesomeIcon icon={faClipboard} /> Description
@@ -322,9 +324,11 @@ const Wrap = styled.section`
   }
   .swiper-button-next {
     background: url(${Right}) no-repeat center;
+    visibility: hidden;
   }
   .swiper-button-prev {
     background: url(${Left}) no-repeat center;
+    visibility: hidden;
   }
   .swiper-button-next::after,
   .swiper-button-prev::after {
@@ -344,6 +348,12 @@ const Date = styled.p`
 `;
 const SwiperContainer = styled.div`
   max-width: 100%;
+  :hover {
+    .swiper-button-next,
+    .swiper-button-prev {
+      visibility: visible;
+    }
+  }
 `;
 const Project = styled.div`
   max-width: 50rem;

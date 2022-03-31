@@ -397,15 +397,17 @@ const Wrap = styled.section`
   .swiper-pagination-fraction {
     bottom: 1rem;
   }
-  .swiper-button-next {
-    background: url(${Right}) no-repeat center;
-  }
-  .swiper-button-prev {
-    background: url(${Left}) no-repeat center;
-  }
   .swiper-button-next::after,
   .swiper-button-prev::after {
     display: none;
+  }
+  .swiper-button-next {
+    background: url(${Right}) no-repeat center;
+    visibility: hidden;
+  }
+  .swiper-button-prev {
+    background: url(${Left}) no-repeat center;
+    visibility: hidden;
   }
 `;
 const ContentContainer = styled.div`
@@ -417,7 +419,6 @@ const ContentContainer = styled.div`
   gap: 2rem;
 `;
 const Logo = styled.div`
-  margin: 0 auto 2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -435,7 +436,10 @@ const LogoImg = styled.img`
 const Content = styled.div`
   border-left: 1px solid lightgray;
   padding-left: 2rem;
-  width: 32rem;
+  width: 65%;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
 const ContentText = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.small};
@@ -450,6 +454,12 @@ const Text = styled.p`
 const SwiperContainer = styled.div`
   max-width: 100%;
   transform: translateX(-7%);
+  :hover {
+    .swiper-button-next,
+    .swiper-button-prev {
+      visibility: visible;
+    }
+  }
 `;
 const SwiperContent = styled.div`
   max-width: 80%;

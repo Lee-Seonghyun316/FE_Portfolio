@@ -27,6 +27,8 @@ const Head = () => (
       <Text>
         안녕하세요. 주어진 일을 책임감을 가지고 끝까지 마무리하는 것이 저의 장점이며, <br />
         같이 일하고 싶은 개발자가 되기 위해 노력하고 있습니다.
+        <br />
+        https://seonghyun-portfolio.vercel.app/
       </Text>
     </Introduction>
   </div>

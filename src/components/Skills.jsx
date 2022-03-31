@@ -31,7 +31,7 @@ const Skills = () => (
           <CardImg src={VersionControl} alt="version-control" />
         </CardItem>
         <CardItem>
-          <CardTitle>Communication</CardTitle>
+          <CardTitle>Design</CardTitle>
           <CardImg src={Communication} alt="communication" />
         </CardItem>
       </CardContainer>
@@ -76,6 +76,9 @@ const CardTitle = styled.h1`
   text-decoration: underline;
   text-underline-position: under;
   padding: 0.5rem 0 1rem;
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: ${({ theme }) => theme.fontSize.xxSmall};
+  }
 `;
 const CardImg = styled.img`
   max-width: 100%;
