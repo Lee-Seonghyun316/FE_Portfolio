@@ -66,6 +66,9 @@ const CardItem = styled.div`
   background-color: white;
   -webkit-box-shadow: 5px 5px 15px 5px #747474;
   box-shadow: 5px 5px 15px 5px #747474;
+  :hover {
+    transform: translateY(-0.5rem);
+  }
 `;
 const CardTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.xSmall};

@@ -85,4 +85,7 @@ const Link = styled.a`
   color: ${({ theme }) => theme.color.black};
   font-weight: 700;
   text-decoration: none;
+  :hover {
+    color: ${({ theme }) => theme.color.purple};
+  }
 `;

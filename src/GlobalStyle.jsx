@@ -68,6 +68,11 @@ input {
        -moz-appearance: none;
             appearance: none;
             :focus { outline: none; }
+}
+a{
+:hover{
+color: ${({ theme }) => theme.color.purple};
+}
 }`;
 
 export default GlobalStyle;
