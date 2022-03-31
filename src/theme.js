@@ -24,6 +24,7 @@ const fontSize = {
 const color = {
   black: '#000',
   white: '#eee',
+  purple: '#8e24aa',
 };
 
 const common = {
