@@ -65,7 +65,7 @@ const Projects = () => {
     ],
   };
   return (
-    <Wrap>
+    <Wrap id="project">
       <Title text="PROJECTS" />
       <Project>
         <ProjectTitle>SWITI 앱</ProjectTitle>

@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import Title from './common/Title';
 
 const Skills = () => (
-  <Wrap>
+  <Wrap id="skills">
     <Title text="SKILLS" />
     <Content>
       <CardContainer>

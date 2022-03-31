@@ -13,7 +13,7 @@ import Right from '../img/angle-right-solid.svg';
 SwiperCore.use([Navigation, Pagination]);
 
 const Career = () => (
-  <Wrap>
+  <Wrap id="career">
     <Title text="CAREER" />
     <ContentContainer>
       <Logo>
