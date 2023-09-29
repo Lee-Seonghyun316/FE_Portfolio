@@ -13,10 +13,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Head />
-      <AboutMe />
       <Skills />
       <Career />
       <Projects />
+      <AboutMe />
     </ThemeProvider>
   );
 }

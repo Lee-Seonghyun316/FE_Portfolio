@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Title from './common/Title';
 
 const AboutMe = () => (
-  <Wrap>
+  <Wrap id='ABOUT-ME'>
     <Title text="ABOUT ME" />
     <Content>
       <TextItem>
