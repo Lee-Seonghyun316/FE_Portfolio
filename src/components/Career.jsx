@@ -24,25 +24,107 @@ const Career = () => (
         <ContentText>자란다</ContentText>
         <Text>2022.05-재직중</Text>
         <StackTitle>개발 챕터 / 프론트앤드 개발자(정규직)</StackTitle>
-        <Text>에듀 테크 플랫폼 '자란다' web-view 를 개발 및 유지보수 하였습니다. </Text>
-        <StackTitle>
-          <FontAwesomeIcon icon={faCode} /> 서비스 속도 개선
-        </StackTitle>
-        <Stack>
-          <Item><Emphasis>성과</Emphasis>메인화면 로딩속도는 sentry 측정 RUM(Real User Monitoring) 데이터으로 보았을 때 FCP 기준 3.13s 에서 1.57s로
-            49.8% 개선되었으며,
-            메인 번들 사이즈는 parsed size 기준 2.2MB로 29% 감소하였습니다.
-          </Item>
-          <Item><Emphasis>코드 스플리팅</Emphasis>각 화면/관심사별로 자바스크립트 코드를 모듈화하여 관련 화면 진입 등 필요한 시점에 작은 크기의 JS 번들로 불러올 수 있게 하였습니다.
-          </Item>
-          <Item><Emphasis>메인 JS 번들 블록킹 비동기로딩</Emphasis>화면 진입 즉시 필요하지 않은 써드 파티 스크립트들을 지연 로딩하고 스타일 코드가 블럭킹 요소로 작용하지 않도록
-            비동기 로드하였습니다.
-          </Item>
-          <Item><Emphasis>이미지 포맷 최적화</Emphasis>이미지 포맷을 webp로 전환하고, 크기 및 용량을 디바이스 크기에 맞게 최적화하였습니다.
-          </Item><Item>코드 스플리팅 프로젝트 상세 내용은 <Link href='https://techblog.jaranda.kr/asdfsdf-2d9d31a39aa1'>기술 블로그</Link>에서
-          확인 가능합니다.
-        </Item>
-        </Stack>
+        <Text>에듀 테크 플랫폼 <Link href={'https://jaranda.kr/index_parent'} target='_blank'>자란다</Link>의 클라이언트를 개발 및 유지보수
+          하였습니다. </Text>
+        <SwiperContainer>
+          <Swiper className='banner' spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
+            <SwiperSlide>
+              <SwiperContent>
+                <StackTitle>
+                  <FontAwesomeIcon icon={faCode} /> 서비스 속도 개선
+                </StackTitle>
+                <Stack>
+                  <Item><Emphasis>성과</Emphasis>메인화면 로딩속도는 sentry 측정 RUM(Real User Monitoring) 데이터으로 보았을 때 FCP 기준 3.13s
+                    에서 1.57s로
+                    49.8% 개선되었으며,
+                    메인 번들 사이즈는 parsed size 기준 2.2MB로 29% 감소하였습니다.
+                  </Item>
+                  <Item><Emphasis>코드 스플리팅</Emphasis>각 화면/관심사별로 자바스크립트 코드를 모듈화하여 관련 화면 진입 등 필요한 시점에 작은 크기의 JS 번들로 불러올 수
+                    있게 하였습니다.
+                  </Item>
+                  <Item><Emphasis>메인 JS 번들 블록킹 비동기로딩</Emphasis>화면 진입 즉시 필요하지 않은 써드 파티 스크립트들을 지연 로딩하고 스타일 코드가 블럭킹 요소로
+                    작용하지 않도록
+                    비동기 로드하였습니다.
+                  </Item>
+                  <Item>코드 스플리팅 프로젝트 상세 내용은 <Link href='https://techblog.jaranda.kr/asdfsdf-2d9d31a39aa1'
+                                                  target='_blank'>기술 블로그</Link>에서 확인 가능합니다.
+                  </Item>
+                </Stack>
+              </SwiperContent>
+            </SwiperSlide>
+            <SwiperSlide>
+              <SwiperContent>
+                <StackTitle>
+                  <FontAwesomeIcon icon={faCode} /> CI/CD 파이프라인 구축 및 유지보수
+                </StackTitle>
+                <Stack>
+                  <Item><Emphasis>성과</Emphasis>코드리뷰 비용 및 배포 리소스 감소
+                  </Item>
+                  <Item>client 코드 포맷을 lint를 이용해 주도적으로 일원화하고, PR에 커밋이 푸시되었을 때 CI 통과여부를 검사하여 성공했을 때만 머지 가능하도록 CI 파이프라인을
+                    추가했습니다. 또한 에러가 발생했을 때 동료 개발자들이 수정에 용이하도록 가이드 스크립트를 제공하였습니다.
+                  </Item>
+                  <Item>Jenkins를 사용하여 특정 브랜치(dev/staging)에 pr이 머지되었을 때를 트리거하여 CD 파이프 동작하도록 구축했습니다. 또한 JS 번들이 레이지 로딩되고
+                    있는 환경을 고려하여 사용자가 안정적인 서비스를 경험할 수 있도록 chunk JS 파일이 일주일 간 제공되도록 수정했습니다.
+                  </Item>
+                </Stack>
+              </SwiperContent>
+            </SwiperSlide>
+            <SwiperSlide>
+              <SwiperContent>
+                <StackTitle>
+                  <FontAwesomeIcon icon={faCode} /> angular에서 nextjs 프레임워크 마이그레이션
+                </StackTitle>
+                <Stack>
+                  <Item><Emphasis>성과</Emphasis>버그 발생률 감소, jMeter로 측정한 웹성능 기준 페이지 로드 속도 60% 이상 증가
+                  </Item>
+                  <Item>서비스가 중단되지 않고 점진적으로 마이그레이션될 수 있도록 iframe을 이용하여 기존 레거시 프로젝트와 마이그레이션된 프로젝트를 병행하여 서비스를 제공하였습니다.
+                  </Item>
+                  <Item>두 프로젝트 간 이벤트, 데이터 등을 주고받기 위해 postMessage를 이용하여 메시지 프로토콜을 구축하였으며 이를 이용해 중복 api 호출을 줄이고, 마이그레이션으로
+                    인한 사용자 임팩트를 최소화하였습니다.
+                  </Item>
+                </Stack>
+              </SwiperContent>
+            </SwiperSlide>
+            <SwiperSlide>
+              <SwiperContent>
+                <StackTitle>
+                  <FontAwesomeIcon icon={faCode} /> 에듀테크 서비스를 개발 및 운영
+                </StackTitle>
+                <Stack>
+                  <Item><Emphasis>성과</Emphasis>
+                    *일정조율: 확정률 +6.2%p, 매칭률 +7.7%p
+                    *선 지원 후 오티 첫 방문률 +60%p
+                  </Item>
+                  <Item>부모님과 선생님을 적절한 조건에 따라 매칭 및 수업을 진행하는 에듀테크 서비스 개발 및 유지보수하였습니다.
+                  </Item>
+                  <Item>믹스패널, 브레이즈 등의 마테크툴을 이용하여 사용자 행동을 관찰하고 서비스 내 UI/UX 를 개선했습니다.
+                  </Item>
+                  <Item>
+                    프로젝트 결과 확인을 위해 A/B 테스트를 진행했으며, 테스트 자동화를 위해 관련 서비스를 구축하였습니다.
+                  </Item>
+                </Stack>
+              </SwiperContent>
+            </SwiperSlide>
+            <SwiperSlide>
+              <SwiperContent>
+                <StackTitle>
+                  <FontAwesomeIcon icon={faCode} /> 프로그램 빌더 개발 및 운영
+                </StackTitle>
+                <Stack>
+                  <Item><Emphasis>성과</Emphasis>
+                    프로그램 생성 시 필요한 리소스 50 퍼센트 감소, 작업 프로세스 감소(3단계 -> 1단계)
+                  </Item>
+                  <Item>프로그램 상세 페이지, 신청 form, 프로그램 데이터를 빌더를 통해 자동으로 생성하는 소프트웨어를 개발 및 개선
+                  </Item>
+                  <Item>과거 프로그램 생성 시에는 프로그램 MD분이 프로그램 기획서를 작성하면, 서버 개발자가 프로그램 테이블에 데이터를 추가하고, 클라이언트 개발자가 신청서 내 프로그램 옵션 및
+                    상세 페이지를 하드코딩 3단계가 필요했습니다. 위 프로젝트 배포 후, 백오피스에서 MD분이 프로그램 스펙을 설정하면 DB 작업, 신청서 옵션
+                    적용, 상세 페이지 생성 과정이 자동화되었습니다.
+                  </Item>
+                </Stack>
+              </SwiperContent>
+            </SwiperSlide>
+          </Swiper>
+        </SwiperContainer>
       </Content>
     </ContentContainer>
     <ContentContainer>
@@ -508,6 +590,10 @@ const StackTitle = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xSmall};
   font-weight: 600;
   padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 `;
 const SubText = styled.div`
   font-size: ${({ theme }) => theme.fontSize.xxSmall};
