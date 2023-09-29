@@ -9,15 +9,45 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import Left from '../img/angle-left-solid.svg';
 import Right from '../img/angle-right-solid.svg';
+import Jaranda from '../img/jaranda.png';
 
 SwiperCore.use([Navigation, Pagination]);
 
 const Career = () => (
-  <Wrap id="career">
-    <Title text="CAREER" />
+  <Wrap id='career'>
+    <Title text='CAREER' />
     <ContentContainer>
       <Logo>
-        <LogoImg src={Mangnut} alt="mangnut" />
+        <LogoImg src={Jaranda} alt='jaranda' />
+      </Logo>
+      <Content>
+        <ContentText>자란다</ContentText>
+        <Text>2022.05-재직중</Text>
+        <StackTitle>개발 챕터 / 프론트앤드 개발자(정규직)</StackTitle>
+        <Text>에듀 테크 플랫폼 '자란다' web-view 를 개발 및 유지보수 하였습니다. </Text>
+        <StackTitle>
+          <FontAwesomeIcon icon={faCode} /> 서비스 속도 개선
+        </StackTitle>
+        <Stack>
+          <Item><Emphasis>성과</Emphasis>메인화면 로딩속도는 sentry 측정 RUM(Real User Monitoring) 데이터으로 보았을 때 FCP 기준 3.13s 에서 1.57s로
+            49.8% 개선되었으며,
+            메인 번들 사이즈는 parsed size 기준 2.2MB로 29% 감소하였습니다.
+          </Item>
+          <Item><Emphasis>코드 스플리팅</Emphasis>각 화면/관심사별로 자바스크립트 코드를 모듈화하여 관련 화면 진입 등 필요한 시점에 작은 크기의 JS 번들로 불러올 수 있게 하였습니다.
+          </Item>
+          <Item><Emphasis>메인 JS 번들 블록킹 비동기로딩</Emphasis>화면 진입 즉시 필요하지 않은 써드 파티 스크립트들을 지연 로딩하고 스타일 코드가 블럭킹 요소로 작용하지 않도록
+            비동기 로드하였습니다.
+          </Item>
+          <Item><Emphasis>이미지 포맷 최적화</Emphasis>이미지 포맷을 webp로 전환하고, 크기 및 용량을 디바이스 크기에 맞게 최적화하였습니다.
+          </Item><Item>코드 스플리팅 프로젝트 상세 내용은 <Link href='https://techblog.jaranda.kr/asdfsdf-2d9d31a39aa1'>기술 블로그</Link>에서
+          확인 가능합니다.
+        </Item>
+        </Stack>
+      </Content>
+    </ContentContainer>
+    <ContentContainer>
+      <Logo>
+        <LogoImg src={Mangnut} alt='mangnut' />
       </Logo>
       <Content>
         <ContentText>수버킷</ContentText>
@@ -45,14 +75,14 @@ const Career = () => (
     </ContentContainer>
     <ContentContainer>
       <Logo>
-        <LogoImg src={Wanted} alt="wanted" widthPercent={70} />
+        <LogoImg src={Wanted} alt='wanted' widthPercent={70} />
       </Logo>
       <Content>
         <ContentText>프리온보딩 프론트엔드 코스</ContentText>
         <Text>2022.02-04</Text>
         <Text>다양한 기술 스택을 이용하여 8개의 프로젝트를 완성하였습니다. </Text>
         <SwiperContainer>
-          <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
+          <Swiper className='banner' spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
             <SwiperSlide>
               <SwiperContent>
                 <StackTitle>
@@ -100,10 +130,10 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/Lee-Seonghyun316/wanted-codestates-project-9">Github</Link>
+                    <Link href='https://github.com/Lee-Seonghyun316/wanted-codestates-project-9'>Github</Link>
                   </Item>
                   <Item>
-                    <Link href="https://wanted-codestates-project-9-kappa.vercel.app/">배포주소</Link>
+                    <Link href='https://wanted-codestates-project-9-kappa.vercel.app/'>배포주소</Link>
                   </Item>
                   <Item>
                     참여율 : 100% (개인 프로젝트)
@@ -136,12 +166,12 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-06">
+                    <Link href='https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-06'>
                       Github(private)
                     </Link>
                   </Item>
                   <Item>
-                    <Link href=" https://wanted-codestates-project-05-06.vercel.app/">배포주소</Link>
+                    <Link href=' https://wanted-codestates-project-05-06.vercel.app/'>배포주소</Link>
                   </Item>
                   <Item>
                     참여율 : 15% (팀 프로젝트 : 7명)
@@ -174,13 +204,13 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-05">
+                    <Link href='https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-05'>
                       Github(public)
                     </Link>
                     몰
                   </Item>
                   <Item>
-                    <Link href="https://wanted-codestates-project-05-05-01.vercel.app/">배포주소</Link>
+                    <Link href='https://wanted-codestates-project-05-05-01.vercel.app/'>배포주소</Link>
                   </Item>
                   <Item>
                     참여율 : 17% (팀 프로젝트 : 6명)
@@ -214,12 +244,12 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-02">
+                    <Link href='https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-02'>
                       Github(public)
                     </Link>
                   </Item>
                   <Item>
-                    <Link href="https://wanted-codestates-project-05-02.vercel.app/">배포주소</Link>
+                    <Link href='https://wanted-codestates-project-05-02.vercel.app/'>배포주소</Link>
                   </Item>
                   <Item>
                     참여율 : 17% (팀 프로젝트 : 6명)
@@ -249,12 +279,12 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-11">
+                    <Link href='https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-11'>
                       Github(public)
                     </Link>
                   </Item>
                   <Item>
-                    <Link href="https://wanted-codestates-project-team-05-11.vercel.app/">배포주소</Link>
+                    <Link href='https://wanted-codestates-project-team-05-11.vercel.app/'>배포주소</Link>
                   </Item>
                   <Item>
                     참여율 : 17% (팀 프로젝트 : 6명)
@@ -286,12 +316,12 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-10-3">
+                    <Link href='https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-10-3'>
                       Github(public)
                     </Link>
                   </Item>
                   <Item>
-                    <Link href="https://wanted-codestates-project-team-05.github.io/wanted-codestates-project-05-10-3/">
+                    <Link href='https://wanted-codestates-project-team-05.github.io/wanted-codestates-project-05-10-3/'>
                       배포링크
                     </Link>
                   </Item>
@@ -325,12 +355,12 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-08">
+                    <Link href='https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-08'>
                       Github(private)
                     </Link>
                   </Item>
                   <Item>
-                    <Link href="https://wanted-codestates-project-05-08.netlify.app/">배포주소</Link>
+                    <Link href='https://wanted-codestates-project-05-08.netlify.app/'>배포주소</Link>
                   </Item>
                   <Item>
                     참여율 : 17% (팀 프로젝트 : 6명)
@@ -361,12 +391,12 @@ const Career = () => (
                 </Stack>
                 <Stack>
                   <Item>
-                    <Link href="https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-3">
+                    <Link href='https://github.com/wanted-codestates-project-team-05/wanted-codestates-project-05-3'>
                       Github(private)
                     </Link>
                   </Item>
                   <Item>
-                    <Link href="https://wanted-codestates-project-team-05.github.io/wanted-codestates-project-05-3/">
+                    <Link href='https://wanted-codestates-project-team-05.github.io/wanted-codestates-project-05-3/'>
                       배포주소
                     </Link>
                   </Item>
@@ -391,20 +421,24 @@ export default Career;
 const Wrap = styled.section`
   background-color: ${({ theme }) => theme.color.white};
   --swiper-theme-color: black;
+
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
     bottom: 1rem;
   }
+
   .swiper-button-next::after,
   .swiper-button-prev::after {
     display: none;
   }
+
   .swiper-button-next {
     background: url(${Right}) no-repeat center;
     visibility: hidden;
   }
+
   .swiper-button-prev {
     background: url(${Left}) no-repeat center;
     visibility: hidden;
@@ -454,6 +488,7 @@ const Text = styled.p`
 const SwiperContainer = styled.div`
   max-width: 100%;
   transform: translateX(-7%);
+
   :hover {
     .swiper-button-next,
     .swiper-button-prev {
@@ -491,6 +526,9 @@ const Stack = styled.ul`
   list-style: square;
   padding-left: 1rem;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 const Item = styled.li``;
 const ParticipationChart = styled.div`
@@ -508,6 +546,12 @@ const Participation = styled.div`
   border-radius: ${({ percent }) => (percent < 100 ? '1rem 0 0 1rem' : '1rem')};
 `;
 const Link = styled.a`
-  color: grey;
+  color: darkblue;
   font-weight: 600;
+  text-decoration: none;
+`;
+const Emphasis = styled.p`
+  font-weight: bolder;
+  font-size: large;
+  margin-bottom: 0.2rem;
 `;
