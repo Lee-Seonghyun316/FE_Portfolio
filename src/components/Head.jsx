@@ -8,16 +8,16 @@ const Head = () => (
       <Logo>Nika's Portfolio</Logo>
       <Nav>
         <NavItem>
-          <Link href="#skills">스킬</Link>
+          <Link href='#career'>경력</Link>
         </NavItem>
         <NavItem>
-          <Link href="#career">경력</Link>
+          <Link href='#project'>프로젝트</Link>
         </NavItem>
         <NavItem>
-          <Link href="#project">프로젝트</Link>
+          <Link href='#skills'>스킬</Link>
         </NavItem>
         <NavItem>
-          <Link href="#ABOUT-ME">ABOUT ME</Link>
+          <Link href='#ABOUT-ME'>ABOUT ME</Link>
         </NavItem>
       </Nav>
     </Header>
@@ -90,6 +90,7 @@ const Link = styled.a`
   color: ${({ theme }) => theme.color.black};
   font-weight: 700;
   text-decoration: none;
+
   :hover {
     color: ${({ theme }) => theme.color.purple};
   }

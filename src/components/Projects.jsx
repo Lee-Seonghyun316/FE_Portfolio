@@ -22,6 +22,7 @@ import Modal from '../img/component/modal.png';
 import Tabs from '../img/component/tabs.png';
 import Tag from '../img/component/tag.png';
 import Toggle from '../img/component/toggle.png';
+import { Link } from './Career';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -36,9 +37,9 @@ const Projects = () => {
         data: [322, 386],
         backgroundColor: ['rgba(66, 66, 66, 0.4)', 'rgba(158, 158, 158, 0.2)'],
         borderColor: ['rgba(66, 66, 66, 1)', 'rgba(158, 158, 158, 1)'],
-        borderWidth: 1,
-      },
-    ],
+        borderWidth: 1
+      }
+    ]
   };
   const componentData = {
     labels: ['Me'],
@@ -48,9 +49,9 @@ const Projects = () => {
         data: [100],
         backgroundColor: ['rgba(66, 66, 66, 0.4)'],
         borderColor: ['rgba(66, 66, 66, 1)'],
-        borderWidth: 1,
-      },
-    ],
+        borderWidth: 1
+      }
+    ]
   };
   const keeperData = {
     labels: ['Me', 'TeamMembers'],
@@ -60,29 +61,29 @@ const Projects = () => {
         data: [38, 2],
         backgroundColor: ['rgba(66, 66, 66, 0.4)', 'rgba(158, 158, 158, 0.2)'],
         borderColor: ['rgba(66, 66, 66, 1)', 'rgba(158, 158, 158, 1)'],
-        borderWidth: 1,
-      },
-    ],
+        borderWidth: 1
+      }
+    ]
   };
   return (
-    <Wrap id="project">
-      <Title text="PROJECTS" />
+    <Wrap id='project'>
+      <Title text='PROJECTS' />
       <Project>
         <ProjectTitle>SWITI 앱</ProjectTitle>
         <Date>2021.03-2021.12</Date>
         <SwiperContainer>
-          <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
+          <Swiper className='banner' spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
             <SwiperSlide>
-              <Img src={Switi1} alt="switi1" />
+              <Img src={Switi1} alt='switi1' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={Switi2} alt="switi2" />
+              <Img src={Switi2} alt='switi2' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={Switi3} alt="switi3" />
+              <Img src={Switi3} alt='switi3' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={Switi4} alt="switi4" />
+              <Img src={Switi4} alt='switi4' />
             </SwiperSlide>
           </Swiper>
         </SwiperContainer>
@@ -128,10 +129,10 @@ const Projects = () => {
             </StackTitle>
             <Stack>
               <Item>
-                <Link href="https://github.com/purplecode-team/switi_app">GitHub</Link>
+                <Link target='_blank' href='https://github.com/purplecode-team/switi_app'>GitHub</Link>
               </Item>
               <Item>
-                <Link href="https://play.google.com/store/apps/details?id=com.switi.purpleconrshshyn">PlayStore</Link>
+                <Link target='_blank' href='https://play.google.com/store/apps/details?id=com.switi.purpleconrshshyn'>PlayStore</Link>
               </Item>
             </Stack>
           </Content>
@@ -156,24 +157,24 @@ const Projects = () => {
         <ProjectTitle>프론트엔드 컴포넌트 6가지</ProjectTitle>
         <Date>2022.02</Date>
         <SwiperContainer>
-          <Swiper className="banner" spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
+          <Swiper className='banner' spaceBetween={50} slidesPerView={1} navigation pagination={{ clickable: true }}>
             <SwiperSlide>
-              <Img src={Toggle} alt="toggle" />
+              <Img src={Toggle} alt='toggle' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={Modal} alt="modal" />
+              <Img src={Modal} alt='modal' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={Tabs} alt="tabs" />
+              <Img src={Tabs} alt='tabs' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={Tag} alt="tag" />
+              <Img src={Tag} alt='tag' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={AutoComplete} alt="autoComplete" />
+              <Img src={AutoComplete} alt='autoComplete' />
             </SwiperSlide>
             <SwiperSlide>
-              <Img src={ClickToEdit} alt="clickToEdit" />
+              <Img src={ClickToEdit} alt='clickToEdit' />
             </SwiperSlide>
           </Swiper>
         </SwiperContainer>
@@ -215,7 +216,7 @@ const Projects = () => {
             </StackTitle>
             <Stack>
               <Item>
-                <Link href="https://github.com/Lee-Seonghyun316/wanted_pre_onboarding">GitHub</Link>
+                <Link target='_blank' href='https://github.com/Lee-Seonghyun316/wanted_pre_onboarding'>GitHub</Link>
               </Item>
             </Stack>
           </Content>
@@ -282,7 +283,7 @@ const Projects = () => {
             </StackTitle>
             <Stack>
               <Item>
-                <Link href="https://github.com/Lee-Seonghyun316/wanted_pre_onboarding">GitHub</Link>
+                <Link target='_blank' href='https://github.com/Lee-Seonghyun316/wanted_pre_onboarding'>GitHub</Link>
               </Item>
             </Stack>
           </Content>
@@ -316,20 +317,24 @@ const Wrap = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
     bottom: 0;
   }
+
   .swiper-button-next {
     background: url(${Right}) no-repeat center;
     visibility: hidden;
   }
+
   .swiper-button-prev {
     background: url(${Left}) no-repeat center;
     visibility: hidden;
   }
+
   .swiper-button-next::after,
   .swiper-button-prev::after {
     display: none;
@@ -348,6 +353,7 @@ const Date = styled.p`
 `;
 const SwiperContainer = styled.div`
   max-width: 100%;
+
   :hover {
     .swiper-button-next,
     .swiper-button-prev {
@@ -399,8 +405,4 @@ const Stack = styled.ul`
 const Item = styled.li``;
 const Chart = styled.div`
   max-width: 65%;
-`;
-const Link = styled.a`
-  color: grey;
-  font-weight: 600;
 `;

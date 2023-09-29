@@ -628,7 +628,7 @@ const Participation = styled.div`
   opacity: 0.2;
   border-radius: ${({ percent }) => (percent < 100 ? '1rem 0 0 1rem' : '1rem')};
 `;
-const Link = styled.a`
+export const Link = styled.a`
   color: darkblue;
   font-weight: 600;
   text-decoration: none;
