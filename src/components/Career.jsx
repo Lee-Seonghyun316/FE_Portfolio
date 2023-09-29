@@ -134,24 +134,21 @@ const Career = () => (
       <Content>
         <ContentText>수버킷</ContentText>
         <Text>2021.07-2021.12</Text>
-        <StackTitle>운영팀(IT) / 프론트앤드 개발자(인턴)</StackTitle>
-        <Text>망넛이네 브랜드 제품을 구매할 수 있는 모바일/웹 서비스를 유지보수, 개선했습니다.</Text>
+        <StackTitle>운영팀(IT) / 프론트앤드 개발자(IPP 인턴)</StackTitle>
+        <Text>커머스 웹 서비스를 개발 및 운영했습니다. </Text>
         <StackTitle>
-          <FontAwesomeIcon icon={faCode} /> 코드 리팩토링
+          <FontAwesomeIcon icon={faCode} /> 웹 표준 및 웹 접근성 개선
         </StackTitle>
         <Stack>
-          <Item>웹 표준에 맞게 웹 접근성 향상 및 시맨틱 마크업</Item>
-          <Item>크로스 브라우징(IE 11 브라우저 및 사파리 지원)</Item>
-          <Item>데이터 요청 에러 및 로딩 핸들링</Item>
-          <Item>웹 성능 분석 및 개선(이미지 최적화 등)</Item>
+          <Item>웹 표준을 준수하여 시맨틱 마크업 및 웹 접근성을 향상했습니다.</Item>
+          <Item>크로스 브라우징 작업을 통해 다양한 브라우저에서의 호환성 확보했습니다.</Item>
         </Stack>
         <StackTitle>
-          <FontAwesomeIcon icon={faCode} /> 망넛이네 프로트엔드 구현
+          <FontAwesomeIcon icon={faCode} /> SEO(검색 엔진 최적화)
         </StackTitle>
         <Stack>
-          <Item>메인 : 상품 후기 개수 및 별점 연동, 구매전환률 향상을 위한 타이머 쿠폰 팝업 개발</Item>
-          <Item>회원정보 : 마이페이지 UI 개편/쿠폰 확인 페이지 UI 개편/그래프를 이용한 등급 확인 페이지 개발</Item>
-          <Item>상품상세 : 상품 상세 내용을 숨길 수 있는 아코디언 토글 개발</Item>
+          <Item>검색 엔진 최적화를 위한 작업을 진행하여 웹 사이트의 노출성을 향상시켰습니다. </Item>
+          <Item>키워드 연구, 메타 태그 최적화, 사이트 맵 생성 등을 통해 검색 결과에서 상위 랭크를 달성했습니다. </Item>
         </Stack>
       </Content>
     </ContentContainer>
